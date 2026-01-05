@@ -1,113 +1,153 @@
-/* Reset default styles */
+/* ================= GLOBAL RESET ================= */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
-/* Full-page styling */
+/* ================= BODY ================= */
 body {
-    background: linear-gradient(135deg, #329cdd, #f6f6f6);
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0f2f1, #f1f8e9);
+    color: #263238;
+    padding: 30px 15px;
 }
 
-/* Form container */
-.container {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.container:hover {
-    transform: scale(1.02);
-}
-
-/* Form Header */
+/* ================= HEADINGS ================= */
 h1 {
-    font-size: 28px;
-    font-weight: 600;
+    text-align: center;
+    color: #004d40;
+    font-size: 34px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #00695c;
     margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #ffcccb;
 }
 
-/* Labels */
+h3 {
+    color: #004d40;
+    margin-bottom: 12px;
+}
+
+/* ================= FORM ================= */
+form {
+    max-width: 950px;
+    margin: auto;
+}
+
+/* ================= INPUT CARDS ================= */
+.box {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 28px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 121, 107, 0.12);
+    border-left: 6px solid #26a69a;
+}
+
+/* ================= LABELS & INPUTS ================= */
 label {
+    font-weight: 600;
     display: block;
-    font-size: 16px;
-    text-align: left;
-    margin-top: 12px;
-    font-weight: 500;
-    color: #ddd;
+    margin-bottom: 6px;
 }
 
-/* Input fields */
-input, select {
+input {
     width: 100%;
-    padding: 12px;
-    margin-top: 5px;
-    border: none;
+    padding: 12px 14px;
+    margin-bottom: 18px;
     border-radius: 8px;
-    font-size: 16px;
-    background: rgba(255, 255, 255, 0.9);
-    color: #333;
-    transition: 0.3s ease;
+    border: 1px solid #b2dfdb;
+    font-size: 14px;
+    transition: all 0.3s ease;
 }
 
-input:focus, select:focus {
+input:focus {
     outline: none;
-    border: 2px solid #ff6666;
-    box-shadow: 0 0 8px rgba(255, 102, 102, 0.5);
+    border-color: #26a69a;
+    box-shadow: 0 0 0 3px rgba(38, 166, 154, 0.25);
 }
 
-/* Submit Button */
+/* ================= BUTTONS ================= */
 button {
-    width: 100%;
-    padding: 14px;
-    margin-top: 20px;
+    background: linear-gradient(135deg, #26a69a, #00796b);
+    color: #ffffff;
+    padding: 13px 24px;
     border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    background: #ff6666;
-    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: all 0.25s ease;
 }
 
 button:hover {
-    background: #e63946;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 121, 107, 0.35);
 }
 
-/* Responsive Design */
+/* ================= RESULT BOX ================= */
+.result-box {
+    max-width: 950px;
+    margin: 40px auto;
+    background: #e8f5e9;
+    border-left: 6px solid #43a047;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(67, 160, 71, 0.2);
+}
+
+.result-box p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* ================= DASHBOARD ================= */
+.dashboard {
+    max-width: 1150px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.dashboard img {
+    display: block;
+    margin: 35px auto;
+    width: 90%;
+    max-width: 750px;
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 18px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= LINKS ================= */
+a {
+    color: #00796b;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-    .container {
-        width: 90%;
-        padding: 30px;
+    body {
+        padding: 15px 8px;
     }
-    h1 {
-        font-size: 24px;
-    }
-}
 
-@media (max-width: 480px) {
-    .container {
-        width: 95%;
-        padding: 25px;
-    }
     h1 {
-        font-size: 20px;
+        font-size: 26px;
+    }
+
+    .box {
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
     }
 }
